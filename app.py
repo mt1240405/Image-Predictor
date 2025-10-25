@@ -5,10 +5,8 @@ from flask import Flask, render_template, request, jsonify
 import io
 from PIL import Image
 
-# 1. Initialization
 app = Flask(__name__)
 
-# Load the trained model
 MODEL_PATH = "my_model.keras"
 model = load_model(MODEL_PATH)
 
@@ -27,24 +25,19 @@ def model_predict(image_data, model):
     
     return CLASSES[predicted_class_index], predictions[0]
 
-# 3. Flask Routes
 @app.route('/', methods=['GET'])
 def index():
-    # Render the HTML template for the home page (where the user uploads an image)
+
     return render_template('index.html')
 
 @app.route('/predict', methods=['POST'])
 def predict():
     if request.method == 'POST':
-        # Get the file from the request
+
         file = request.files['file']
         if file:
-            # Read the image data
             img_data = file.read()
-            # Get prediction
             label, probabilities = model_predict(img_data, model)
-            
-            # Return prediction result
             return jsonify({
                 'prediction': label,
                 'confidence': f"{np.max(probabilities) * 100:.2f}%"
