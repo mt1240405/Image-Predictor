@@ -1,0 +1,64 @@
+#top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    background: #060076;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    margin-bottom: 30px;
+    border-radius: 5vh;
+}
+
+.model {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button:hover,input:hover{
+    cursor: pointer;
+}
+body {
+    background-color: firebrick;
+}
+
+input,
+button {
+    background-color: rgb(163, 255, 15);
+    border-radius: 5vh;
+    font-size: 25px;
+    padding: 15px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 400;
+    color: darkblue;
+}
+
+input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 30px;
+    background: #3F5EFB;
+    background: linear-gradient(130deg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+}
+
+#prediction-result{
+    justify-content: space-evenly;
+    align-items: center;
+        background-color: darkblue;
+    border-radius: 5vh;
+    font-size: 25px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+    color: rgb(37, 158, 101);
+    height: fit-content;
+    padding: 15px;
+}

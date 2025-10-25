@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CIFAR-10 Image Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div id="top">
+        <h1>Upload a CIFAR-10 Image for Classification</h1>
+    </div>
+
+    <form id="upload-form" action="/predict" method="POST" enctype="multipart/form-data">
+        <div class="model">
+            <input type="file" name="file" accept="image/*" required>
+            <button type="submit">Predict</button>
+        </div>
+    </form>
+    <hr>
+    <h2>Result</h2>
+    <div id="prediction-result">
+        Upload File and Predict
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
